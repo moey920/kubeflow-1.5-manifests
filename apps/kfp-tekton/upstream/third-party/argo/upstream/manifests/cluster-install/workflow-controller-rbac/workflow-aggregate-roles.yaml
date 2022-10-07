@@ -1,6 +1,6 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
-metadata: # kpt-merge: /argo-aggregate-to-view
+metadata:
   name: argo-aggregate-to-view
   labels:
     rbac.authorization.k8s.io/aggregate-to-view: "true"
@@ -22,10 +22,11 @@ rules:
   - get
   - list
   - watch
+
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
-metadata: # kpt-merge: /argo-aggregate-to-edit
+metadata:
   name: argo-aggregate-to-edit
   labels:
     rbac.authorization.k8s.io/aggregate-to-edit: "true"
@@ -52,10 +53,11 @@ rules:
   - patch
   - update
   - watch
+
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
-metadata: # kpt-merge: /argo-aggregate-to-admin
+metadata:
   name: argo-aggregate-to-admin
   labels:
     rbac.authorization.k8s.io/aggregate-to-admin: "true"
@@ -73,8 +75,6 @@ rules:
   - cronworkflows/finalizers
   - clusterworkflowtemplates
   - clusterworkflowtemplates/finalizers
-  - workflowtasksets
-  - workflowtasksets/finalizers
   verbs:
   - create
   - delete

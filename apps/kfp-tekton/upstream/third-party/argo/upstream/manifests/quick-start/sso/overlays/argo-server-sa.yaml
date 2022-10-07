@@ -1,6 +1,6 @@
 apiVersion: v1
 kind: ServiceAccount
-metadata: # kpt-merge: /argo-server
+metadata:
   name: argo-server
   annotations:
     workflows.argoproj.io/rbac-rule: "'authors' in groups && email == 'kilgore@kilgore.trout'"

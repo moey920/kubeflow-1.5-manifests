@@ -1,3 +1,4 @@
+
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -55,6 +56,7 @@ rules:
   - tensorboard.kubeflow.org
   resources:
   - tensorboards
+  - tensorboards/finalizers
   verbs:
   - create
   - delete
@@ -63,12 +65,6 @@ rules:
   - patch
   - update
   - watch
-- apiGroups:
-  - tensorboard.kubeflow.org
-  resources:
-  - tensorboards/finalizers
-  verbs:
-  - update
 - apiGroups:
   - tensorboard.kubeflow.org
   resources:

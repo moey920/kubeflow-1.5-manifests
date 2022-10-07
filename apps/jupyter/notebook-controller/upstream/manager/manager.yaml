@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: manager
-        image: docker.io/kubeflownotebookswg/notebook-controller
+        image: public.ecr.aws/j1r0q0g6/notebooks/notebook-controller
         command:
           - /manager
         env:
@@ -35,14 +35,8 @@ spec:
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
-            path: /healthz
-            port: 8081
-          initialDelaySeconds: 5
-          periodSeconds: 10
-        readinessProbe:
-          httpGet:
-            path: /readyz
-            port: 8081
-          initialDelaySeconds: 5
-          periodSeconds: 10
+            path: /metrics
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 30
       serviceAccountName: service-account

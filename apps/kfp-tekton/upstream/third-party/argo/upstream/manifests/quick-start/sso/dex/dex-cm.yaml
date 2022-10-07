@@ -16,7 +16,6 @@ data:
       - id: argo-server
         redirectURIs:
           - http://localhost:2746/oauth2/callback
-          - http://localhost:8080/oauth2/callback
         name: Argo Server
         secret: ZXhhbXBsZS1hcHAtc2VjcmV0
     connectors:
@@ -30,5 +29,5 @@ data:
         username: admin
         userID: 08a8684b-db88-4b73-90a9-3cd1661f5466
 kind: ConfigMap
-metadata: # kpt-merge: /dex
+metadata:
   name: dex

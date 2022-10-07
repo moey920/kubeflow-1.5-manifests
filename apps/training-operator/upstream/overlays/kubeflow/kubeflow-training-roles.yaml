@@ -22,7 +22,6 @@ rules:
   - apiGroups:
       - kubeflow.org
     resources:
-      - mpijobs
       - tfjobs
       - pytorchjobs
       - mxjobs
@@ -38,7 +37,6 @@ rules:
   - apiGroups:
       - kubeflow.org
     resources:
-      - mpijobs/status
       - tfjobs/status
       - pytorchjobs/status
       - mxjobs/status
@@ -57,7 +55,6 @@ rules:
   - apiGroups:
       - kubeflow.org
     resources:
-      - mpijobs
       - tfjobs
       - pytorchjobs
       - mxjobs
@@ -69,7 +66,6 @@ rules:
   - apiGroups:
       - kubeflow.org
     resources:
-      - mpijobs/status
       - tfjobs/status
       - pytorchjobs/status
       - mxjobs/status

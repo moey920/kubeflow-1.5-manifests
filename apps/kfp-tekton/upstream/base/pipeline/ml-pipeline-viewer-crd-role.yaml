@@ -20,7 +20,6 @@ rules:
   - kubeflow.org
   resources:
   - viewers
-  - viewers/finalizers
   verbs:
   - create
   - get

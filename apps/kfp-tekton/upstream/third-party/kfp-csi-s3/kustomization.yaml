@@ -15,7 +15,6 @@ configMapGenerator:
   - bucket-base64=bWxwaXBlbGluZQ==
   - accessKeyID-base64=bWluaW8=
   - secretAccessKey-bas64=bWluaW8xMjM=
-  - kubelet-path=/var/data
 generatorOptions:
   disableNameSuffixHash: true
 vars:
@@ -47,13 +46,6 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: data.secretAccessKey-bas64
-- name: kubelet-path
-  objref:
-    kind: ConfigMap
-    name: csi-s3-parameters
-    apiVersion: v1
-  fieldref:
-    fieldpath: data.kubelet-path
 
 configurations:
 - params.yaml

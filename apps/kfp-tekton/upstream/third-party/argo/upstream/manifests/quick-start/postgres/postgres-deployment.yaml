@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata: # kpt-merge: /postgres
+metadata:
   name: postgres
   labels:
     app: postgres

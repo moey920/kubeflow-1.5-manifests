@@ -1,6 +1,6 @@
 from . import watch
 
-GROUP = "serving.kserve.io" #"serving.kubeflow.org" 
+GROUP = "serving.kubeflow.org"
 PLURAL = "inferenceservices"
 VERSION = "v1beta1"
 

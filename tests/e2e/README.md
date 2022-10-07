@@ -6,7 +6,7 @@ This test is using the following Kubeflow CRDs:
 1. Kubeflow Pipelines
 2. Katib Experiments
 3. TFJobs
-4. KServe InferenceServices
+4. KFServing InferenceServices
 
 ## How to run
 
